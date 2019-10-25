@@ -71,7 +71,7 @@ table tbody td{
 </style>
         <div class="container-fluid">
         <h1 style="text-align: center; margin: 0px 0 50px 0; ">Available Repairs</h1>
-
+<a href="createdevices.php" class="btn btn-primary" style="text-align: center !important;">CREATE A NEW REPAIR RECORD</a>
 
                 <table class="table table-hover">
                     <thead>
@@ -101,7 +101,7 @@ table tbody td{
                         <td> <?php echo $row['problemDescription']; ?> </td>
                         <td> <a href="read.php?id=<?php echo $row['id']; ?>" class="btn btn-success" style="width: 100px !important;"><img src="https://desktop.github.com/images/octicons/file-media.svg">READ</a> </td>
                         <!--td> <a href="/update.php" class="btn btn-warning"><img src="https://img.icons8.com/material-sharp/24/000000/update-file.png">UPDATE</a> </td-->
-                        <td><form action="update.php" method="POST"><button class="btn btn-warning" type="submit" style="width: 110px !important;" value="<?php  echo $row['id']; ?>" name="update"><img src="https://img.icons8.com/material-sharp/24/000000/update-file.png">UPDATE</button></form></td>
+                        <td><form action="<?php echo ''.'update.php'; ?>" method="POST"><button class="btn btn-warning" type="submit" style="width: 110px !important;" value="<?php  echo $row['id']; ?>" name="update"><img src="https://img.icons8.com/material-sharp/24/000000/update-file.png">UPDATE</button></form></td>
                         <!--td> <a href="/delete.php" class="btn btn-danger"><img src="https://img.icons8.com/material-rounded/24/000000/delete-forever.png">DELETE</a> </td-->
                         <td><form action="delete.php" method="POST"><button class="btn btn-danger" type="submit" value="<?php  echo $row['id']; ?>" style="width: 110px !important;" name="delete"><img src="https://img.icons8.com/material-rounded/24/000000/delete-forever.png">DELETE</button></form></td>
                             
