@@ -9,7 +9,9 @@ create a database and give it a name of your liking.
 # 2. Create repairs table
 
 use this sql script;
-        CREATE TABLE `emmanuelcg`.`repairs` ( `id` INT NOT NULL AUTO_INCREMENT , `deviceName` VARCHAR(255) NOT NULL , `Customer` VARCHAR(255) NOT NULL , `problemDescription` TEXT NOT NULL , `servicedBy` VARCHAR(255) NOT NULL , `imeiNumber` BIGINT NOT NULL , `date` DATE NOT NULL , `cost` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+        CREATE TABLE `repairs` ( `id` INT NOT NULL AUTO_INCREMENT , `deviceName` VARCHAR(255) NOT NULL , `Customer` VARCHAR(255)
+        NOT NULL , `problemDescription` TEXT NOT NULL , `servicedBy` VARCHAR(255) NOT NULL , `imeiNumber` BIGINT NOT NULL , `date`
+        DATE NOT NULL , `cost` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
 # 3. Configure the environment
 Go to the config directory, open the conf.php file and past this code;
