@@ -85,6 +85,9 @@ table tbody td{
 <div class="container back-grounder">
 
 <h1 style="text-align: center; padding-bottom: 70px;">Read a specific repair instance</h1>
+
+<a href="index.php" class="btn btn-primary" style="text-align: center !important;">BACK</a>
+
     <table class="table table-hover">
         <thead>
             <tr>

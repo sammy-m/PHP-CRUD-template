@@ -19,7 +19,7 @@ require_once "config/dbconnect.php";
         if($stmt->execute()){
             $result = $stmt->get_result();
             
-            if($result->num_rows > 0){
+            if($result->num_rows >= 0){
                 /* Fetch result row as an associative array. Since the result set
                 contains only one row, we don't need to use while loop */
                 $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -88,7 +88,12 @@ table tbody td{
                         
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody><?php if(!isset($rows[0])){  /*echo print_r($rows);*/ ?>
+                            <tr> <td colspan="11"> NO ENTRIES AVAILABLE! &nbsp; <a href="createdevices.php" class="btn btn-primary" style="text-align: center !important;">CREATE A NEW REPAIR RECORD</a>  </td></tr>
+
+                    <?php }?>
+
+                    
                     <?php foreach($rows as $row) {?>
                         <tr>
                         <th scope="row"> <?php echo $row['id']; ?> </th>
